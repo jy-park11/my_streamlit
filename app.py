@@ -3,19 +3,6 @@ import login      # auth.py 불러오기
 import quiz_data   # quiz_data.py 불러오기
 import time
 
-print("--- Streamlit 앱이 새로고침/재실행되었습니다 ---")
-
-st.title("내 EC2 앱")
-
-if st.button("클릭해 보세요"):
-    st.write("버튼이 눌렸습니다!")
-    # 이 부분이 터미널(쉘)에 로그를 남깁니다.
-    print("로그: 사용자가 버튼을 클릭했습니다.") 
-
-user_input = st.text_input("아무 글자나 입력하세요")
-if user_input:
-    print(f"로그: 사용자 입력 내용 -> {user_input}")
-
 def main():
     # 세션 초기화
     if "is_logged_in" not in st.session_state:
